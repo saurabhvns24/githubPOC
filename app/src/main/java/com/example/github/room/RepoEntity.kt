@@ -12,7 +12,8 @@ data class RepoEntity(
     val description: String?,
     val ownerName: String,
     val ownerAvatarUrl: String,
-    val htmlUrl: String
+    val htmlUrl: String,
+    val contributors_url:String
 ) {
     fun toRepo(): Repo {
         return Repo(
@@ -21,7 +22,7 @@ data class RepoEntity(
             description = this.description,
             html_url = this.htmlUrl,
             owner = Owner(avatar_url = this.ownerAvatarUrl, login = this.ownerName),
-            contributors_url = this.ownerAvatarUrl
+            contributors_url = this.contributors_url
         )
     }
 }

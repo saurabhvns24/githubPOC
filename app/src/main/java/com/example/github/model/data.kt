@@ -17,7 +17,8 @@ data class Repo(
             description = this.description,
             htmlUrl = this.html_url,
             ownerAvatarUrl = this.owner.avatar_url,
-            ownerName = this.owner.login
+            ownerName = this.owner.login,
+            contributors_url = this.contributors_url
         )
     }
 }
