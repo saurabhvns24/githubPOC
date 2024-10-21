@@ -26,7 +26,7 @@ import com.example.github.viewmodel.RepoViewModel
 fun HomeScreen(viewModel: RepoViewModel, onRepoClick: (Repo) -> Unit) {
     val query = remember { mutableStateOf("") }
     LaunchedEffect(Unit) {
-//        viewModel.loadOfflineRepos() // Call to load offline repos
+        viewModel.loadOfflineRepos() // Call to load offline repos
     }
     Column(
         modifier = Modifier
